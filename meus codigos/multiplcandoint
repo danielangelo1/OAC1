@@ -1,0 +1,12 @@
+	.text	#area para instruçoes do programa
+
+	li $t0, 12 # adicionado o valor para esse registrador
+	addi $t1, $zero, 10 # adicionado o valor para esse registrador
+	sll $s1, $t1, 10 #multiplocar 10 por 2*10=1024
+	
+	#s0 sera o resultado da multi
+	mul $s0, $t0, $t1
+	
+	li $v0, 1
+	move $a0, $s0
+	syscall

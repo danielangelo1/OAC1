@@ -1,0 +1,14 @@
+	.text	#area para instruçoes do programa
+
+	li $t0, 32 # adicionado o valor para esse registrador
+	li $t1, 5 # adicionado o valor para esse registrador
+
+	srl $s2, $t1, 2
+		
+	div $t0, $t1
+	
+	#parte inteira em s0
+	mflo $s0
+	
+	#resto em s1
+	mfhi $s1
